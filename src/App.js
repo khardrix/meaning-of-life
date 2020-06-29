@@ -9,6 +9,11 @@ class App extends React.Component {
             meaningOfLife: 47
         }
     }
+
+    handleClick = () => {
+        this.setState({meaningOfLife: this.state.meaningOfLife + 1})
+    }
+
     render(){
         return (
             <div className="App">
@@ -18,7 +23,7 @@ class App extends React.Component {
                     {this.state.meaningOfLife}
                 </p>
                 <button
-                
+                    onClick={this.handleClick}
                 >
                 Update State
                 </button>
