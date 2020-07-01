@@ -6,13 +6,14 @@ class App extends Component {
     constructor(props){
         super(props)
         this.state = {
-            meaningOfLife: 47 + this.props.increment
+            meaningOfLife: 47 
         }
     }
 
     handleClick = () => {
         this.setState((prevState, prevProps) => {
-            return {meaningOfLife: prevState.meaningOfLife + prevProps.increment}
+            return { meaningOfLife: prevState.meaningOfLife + 
+                prevProps.increment }
         }, 
             () => console.log(this.state.meaningOfLife))
     }
